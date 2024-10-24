@@ -4,7 +4,7 @@
             <strong>PRO</strong> feature!
             Click <strong><a href="https://www.creative-tim.com/live/soft-ui-dashboard-pro-laravel" target="_blank"
                     class="text-white">here</a></strong>
-            to see the PROssss
+            to see the PRO
             product!</span>
     </div>
 
