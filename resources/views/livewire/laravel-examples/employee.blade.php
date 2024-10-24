@@ -31,7 +31,7 @@
 
      
 
-        .nav-link.active {
+        .nav-item .nav-link.active {
             color: #000; 
             background-color: none; 
             border: 3px solid #000; 
@@ -75,7 +75,7 @@
                
                 <div class="col-auto my-auto fw-bold ">
                     <div class="h-100">
-                        <h5 class="mb-1">
+                        <h5 style ="color:#000;" class="mb-1">
                              
                         <strong>{{ $activeTab === 'empRecords' ? 'Employee Records' : '' }}</strong>
                         <strong>{{ $activeTab === 'addEmployee' ? 'Add Employee' : '' }}</strong>
