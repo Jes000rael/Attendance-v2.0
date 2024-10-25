@@ -45,7 +45,7 @@ input[type="text"] {
                                 <div class="mb-3">
                                     <label for="username" class="fw-bold fs-6">{{ __('Username') }}</label>
                                     <div class="@error('username')border border-danger rounded-3 @enderror">
-                                        <input wire:model.live="username" id="username" type="text" class="form-control"
+                                        <input style="height: 40px;" wire:model.live="username" id="username" type="text" class="form-control"
                                             placeholder="Username" aria-label="username" aria-describedby="username-addon">
                                     </div>
                                     @error('username') <span class="text-danger error fw-bold" style="font-size: 12px;">{{ $message }}</span> @enderror
@@ -53,7 +53,7 @@ input[type="text"] {
                                 <div class="mb-3">
                                     <label for="password" class="fw-bold fs-6">{{ __('Password') }}</label>
                                     <div class="@error('password')border border-danger rounded-3 @enderror  password-container">
-                                        <input wire:model.live="password" id="password" type="password" class="form-control"
+                                        <input style="height: 40px;" wire:model.live="password" id="password" type="password" class="form-control"
                                             placeholder="Password" aria-label="Password"
                                             aria-describedby="password-addon">
                                             <span id="togglePassword" class="toggle-password" onclick="togglePassword()">

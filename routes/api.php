@@ -45,7 +45,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/employee-records', [EmployeeRecord::class, 'index']);
+Route::get('/employee-records', [EmployeeRecord::class, 'index'])->name('employeeIndex');
 Route::get('/employee-records/{id}', [EmployeeRecord::class, 'show']);
 Route::post('/employee-records', [EmployeeRecord::class, 'store']);
 Route::put('/employee-records/{id}', [EmployeeRecord::class, 'update']);
