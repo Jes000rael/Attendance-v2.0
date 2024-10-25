@@ -632,13 +632,11 @@
             position: 'top-end', 
             toast: true,
 
-            showClass: {
-                popup: 'animate__animated animate__fadeInDown',
-                icon: 'animate__animated animate__bounce', 
-            },
+            
             hideClass: {
                 popup: 'animate__animated animate__fadeOutUp', 
             },
+            
            
          
             
