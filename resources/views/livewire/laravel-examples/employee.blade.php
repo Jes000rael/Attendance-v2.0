@@ -54,6 +54,20 @@
     }
 }
 
+@media (max-width: 900px) {
+    .responsive-header {
+        height: 30vh;  
+        background-size: contain; 
+    }
+}
+
+@media (max-width: 1600px) {
+    .responsive-header {
+        height: 30vh;  
+        background-size: contain; 
+    }
+}
+
 @media (max-width: 480px) {
     .responsive-header {
         height: 20vh;  
