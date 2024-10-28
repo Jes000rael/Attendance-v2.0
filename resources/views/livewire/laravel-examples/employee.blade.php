@@ -272,19 +272,19 @@
                     <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
                   </td>
                   <td class="align-middle text-center">
-                    <a href="" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="View" data-bs-toggle="modal" data-bs-target="#employeeModal">
+                    <a href="" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="View" data-bs-toggle="modal" data-bs-target="#Modalview">
                       <i class="fa fa-eye"></i>
                     </a>
-                    <a href="" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="Edit user">
-                      <i class="fa fa-edit"></i>
+                    <a href="" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="Edit user" data-bs-toggle="modal" data-bs-target="#Modalupdate">
+                      <i class="fa fa-user-edit"></i>
                     </a>
                     <a href="" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="Edit user">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
                 </tr>
-                <!-- modal -->
-                <div class="modal fade" id="employeeModal" tabindex="-1" aria-labelledby="employeeModalLabel" aria-hidden="true">
+                <!-- modal view-->
+                <div class="modal fade" id="Modalview" tabindex="-1" aria-labelledby="employeeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -292,13 +292,371 @@
                 
 
                 </h5>
-                <button class="btn float-end" data-bs-dismiss="modal"><i fas fa-close></i></button>
+                <button class="btn btn-tranparent shadow-none" data-bs-dismiss="modal"><i class="fa fa-close fs-5"></i></button>
             </div>
             <div class="modal-body">
-                dadad
+        <div class="container">
+         <div class="row mt-2 mb-2">
+             <div class="col-4">Name:</div>
+            <div class="col-8 text-center">Jesrael Escaran</div>
+              </div>
+              <div class="row mt-2 mb-2">
+             <div class="col-4">Job Title:</div>
+            <div class="col-8 text-center">Soft Developer</div>
+              </div>
+              <div class="row mt-2 mb-2">
+             <div class="col-4">Department:</div>
+            <div class="col-8 text-center">Information Technology (IT)</div>
+              </div>
+              <div class="row mt-2 mb-2">
+             <div class="col-4">Seniority Level:</div>
+            <div class="col-8 text-center">High-level</div>
+              </div>
+              <div class="row mt-2 mb-2">
+             <div class="col-4">Contact Number:</div>
+            <div class="col-8 text-center">090-4542-3456</div>
+              </div>
+              <div class="row mt-2 mb-2">
+             <div class="col-4">Emergency Contact:</div>
+            <div class="col-8 text-center">Mark Jun Brigiks (ML Brother)</div>
+              </div>
+             </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal edit -->
+<div class="modal fade" id="Modalupdate" tabindex="-1" aria-labelledby="employeeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="employeeModalLabel">Update Employee </h5>
+                <button class="btn btn-tranparent shadow-none" data-bs-dismiss="modal"><i class="fa fa-close fs-5"></i></button>
+            </div>
+            <div class="modal-body">
+               <div class="container">
+               <form wire:submit.prevent="save" action="#" method="POST" role="form text-left">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('First Name') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="First Name" required>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Last Name') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Last Name">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Middle Name') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Middle Name">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Suffix') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Seniority Level">
+                                        <option value="">Jr. (Junior).</option>
+                                        <option value="">Sr. (Senior)</option>
+                                        <option value="">II (Second)</option>
+                                        <option value="">III (Third)</option>
+                                        <option value="">None</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Blood Type') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Blood Type">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Address') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Address">
+                                     <!-- <textarea class="form-control" name="" id="" placeholder="Address"></textarea> -->
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Seniority Level') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <select class="form-control form-select" name="" id="" placeholder="Seniority Level">
+                                        <option value="">Entry-level</option>
+                                        <option value="">Mid-level</option>
+                                        <option value="">Senior-level</option>
+                                        <option value="">Executive-level</option>
+                                        <option value="">Board-level</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Employement Status ID') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Employment Status ID">
+                                        <option value="">Full-Time Employee (FTE)</option>
+                                        <option value="">Part-Time Employee (PTE)</option>
+                                        <option value="">Contractor</option>
+                                        <option value="">Temporary Employee</option>
+                                        <option value="">Intern</option>
+                                        <option value="">Freelancer</option>
+                                        <option value="">Remote Worker</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Job Title ID') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Job Title ID">
+                                        <option value="">Software Engineer - ID: SE001</option>
+                                        <option value="">Data Analyst - ID: DA002</option>
+                                        <option value="">Project Manager - ID: PM003</option>
+                                        <option value="">Marketing Specialist - ID: MS004</option>
+                                        <option value="">Human Resources Manager - ID: HRM005</option>
+                                        <option value="">Sales Associate - ID: SA006</option>
+                                        <option value="">Graphic Designer - ID: GD007</option>
+                                        <option value="">Product Manager - ID: PM008</option>
+                                        <option value="">Customer Service Representative - ID: CSR009</option>
+                                        <option value="">Financial Analyst - ID: FA010</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Department Title') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Department Title">
+                                        <option value="">Human Resources (HR)</option>
+                                        <option value="">Finance</option>
+                                        <option value="">Marketing</option>
+                                        <option value="">Sales</option>
+                                        <option value="">Operations</option>
+                                        <option value="">Information Technology (IT)</option>
+                                        <option value="">Customer Service</option>
+                                        <option value="">Research and Development (R&D)</option>
+                                        <option value="">Product Management</option>
+                                        <option value="">Legal</option>
+                                        <option value="">Compliance</option>
+                                        <option value="">Public Relations (PR)</option>
+                                        <option value="">Supply Chain Management</option>
+                                        <option value="">Facilities Management</option>
+                                        <option value="">Business Development</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Date of Birth') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <input class="form-control" type="date" placeholder="Date of Birth">
+                                
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Date Hired') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="date" placeholder="Date Hired">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Date Start') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="date" placeholder="Date Start">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Hourly Rate') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="number" placeholder="Hourly Rate">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Has Night Diff') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Department Title">
+                                        <option value="">Eligibility</option>
+                                        <option value="">Percentage Increase</option>
+                                        <option value="">Defined Hours</option>
+                                        <option value="">Impact on Benefits</option>
+                                        <option value="">Union Contracts</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Username') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Username">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Password') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Password">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Contact Number') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="number" placeholder="Contact Number">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Emergency Contact') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="number" placeholder="Emergency Contact">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Emergency Person') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Emergency Person">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Relationship') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Relationship">
+                                        <option value="">Manager-Employee Relationship</option>
+                                        <option value="">Colleague Relationships</option>
+                                        <option value="">Employee-Client Relationship</option>
+                                        <option value="">Supplier Relationships</option>
+                                        <option value="">Human Resources Relationships</option>
+                                        <option value="">Mentorship</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('TIN') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="TIN">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('SSS') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="SSS">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('PAGIBIG') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="PAGIBIG">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('PHILHEALTH') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="PHILHEALTH">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Shift ID') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Shift ID">
+                                        <option value="">Day Shift - ID: DS001</option>
+                                        <option value="">Night Shift - ID: NS002</option>
+                                        <option value="">Evening Shift - ID: ES003</option>
+                                        <option value="">Weekend Shift - ID: WS004</option>
+                                        <option value="">Split Shift - ID: SS005</option>
+                                        <option value="">Overnight Shift - ID: OS006</option>
+                                        <option value="">Flexible Shift - ID: FS007</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+
+                      
+                    <div class="d-flex justify-content-start">
+                        <button type="submit" class="btn bg-gradient-dark btn-md mt-4 mb-4"><i class="fas fa-plus me-3"></i>{{ 'Save Changes' }}</button>
+                    </div>
+                </form>
+
+               </div>
             </div>
         </div>
     </div>
@@ -312,6 +670,7 @@
 
     </div>
     <div  class="tab-pane {{ $activeTab === 'addEmployee' ? 'active' : '' }}" id="addEmployee">
+  
         <div class="card">
             <div class="card-header pb-0 px-3">
                 <h6 class="mb-0">{{ __('Profile Information') }}</h6>
@@ -320,59 +679,318 @@
 
                 <form wire:submit.prevent="save" action="#" method="POST" role="form text-left">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <label for="user.first_name" class="form-control-label">{{ __('First Name') }}</label>
                                 <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
-                                    <input wire:model.live="user.first_name" class="form-control" type="text" placeholder="First Name"
-                                        id="user.first_name">
+                                    <input class="form-control" type="text" placeholder="First Name">
                                 </div>
                                 @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <div class="form-group">
-                                <label for="user-email" class="form-control-label">{{ __('Email') }}</label>
-                                <div class="@error('user.email')border border-danger rounded-3 @enderror">
-                                    <input wire:model.live="user.email" class="form-control" type="email"
-                                        placeholder="@example.com" id="user-email">
+                                <label for="user.first_name" class="form-control-label">{{ __('Last Name') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Last Name">
                                 </div>
-                                @error('user.email') <div class="text-danger">{{ $message }}</div> @enderror
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <div class="form-group">
-                                <label for="user.phone" class="form-control-label">{{ __('Phone') }}</label>
-                                <div class="@error('user.phone')border border-danger rounded-3 @enderror">
-                                    <input wire:model.live="user.phone" class="form-control" type="tel"
-                                        placeholder="40770888444" id="phone">
+                                <label for="user.first_name" class="form-control-label">{{ __('Middle Name') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Middle Name">
                                 </div>
-                                @error('user.phone') <div class="text-danger">{{ $message }}</div> @enderror
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <div class="form-group">
-                                <label for="user.location" class="form-control-label">{{ __('Location') }}</label>
-                                <div class="@error('user.location') border border-danger rounded-3 @enderror">
-                                    <input wire:model.live="user.location" class="form-control" type="text"
-                                        placeholder="Location" id="name">
+                                <label for="user.first_name" class="form-control-label">{{ __('Suffix') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Seniority Level">
+                                        <option value="">Jr. (Junior).</option>
+                                        <option value="">Sr. (Senior)</option>
+                                        <option value="">II (Second)</option>
+                                        <option value="">III (Third)</option>
+                                        <option value="">None</option>
+                                    </select>
                                 </div>
-                                @error('user.location') <div class="text-danger">{{ $message }}</div> @enderror
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="about">{{ 'About Me' }}</label>
-                        <div class="@error('user.about')border border-danger rounded-3 @enderror">
-                            <textarea wire:model.live="user.about" class="form-control" id="about" rows="3"
-                                placeholder="Say something about yourself"></textarea>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Blood Type') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Blood Type">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
                         </div>
-                        @error('user.about') <div class="text-danger">{{ $message }}</div> @enderror
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn bg-gradient-dark btn-md mt-4 mb-4">{{ 'Save Changes' }}</button>
+
+
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Address') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Address">
+                                     <!-- <textarea class="form-control" name="" id="" placeholder="Address"></textarea> -->
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Seniority Level') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <select class="form-control form-select" name="" id="" placeholder="Seniority Level">
+                                        <option value="">Entry-level</option>
+                                        <option value="">Mid-level</option>
+                                        <option value="">Senior-level</option>
+                                        <option value="">Executive-level</option>
+                                        <option value="">Board-level</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Employement Status ID') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Employment Status ID">
+                                        <option value="">Full-Time Employee (FTE)</option>
+                                        <option value="">Part-Time Employee (PTE)</option>
+                                        <option value="">Contractor</option>
+                                        <option value="">Temporary Employee</option>
+                                        <option value="">Intern</option>
+                                        <option value="">Freelancer</option>
+                                        <option value="">Remote Worker</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Job Title ID') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Job Title ID">
+                                        <option value="">Software Engineer - ID: SE001</option>
+                                        <option value="">Data Analyst - ID: DA002</option>
+                                        <option value="">Project Manager - ID: PM003</option>
+                                        <option value="">Marketing Specialist - ID: MS004</option>
+                                        <option value="">Human Resources Manager - ID: HRM005</option>
+                                        <option value="">Sales Associate - ID: SA006</option>
+                                        <option value="">Graphic Designer - ID: GD007</option>
+                                        <option value="">Product Manager - ID: PM008</option>
+                                        <option value="">Customer Service Representative - ID: CSR009</option>
+                                        <option value="">Financial Analyst - ID: FA010</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Department Title') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Department Title">
+                                        <option value="">Human Resources (HR)</option>
+                                        <option value="">Finance</option>
+                                        <option value="">Marketing</option>
+                                        <option value="">Sales</option>
+                                        <option value="">Operations</option>
+                                        <option value="">Information Technology (IT)</option>
+                                        <option value="">Customer Service</option>
+                                        <option value="">Research and Development (R&D)</option>
+                                        <option value="">Product Management</option>
+                                        <option value="">Legal</option>
+                                        <option value="">Compliance</option>
+                                        <option value="">Public Relations (PR)</option>
+                                        <option value="">Supply Chain Management</option>
+                                        <option value="">Facilities Management</option>
+                                        <option value="">Business Development</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Date of Birth') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <input class="form-control" type="date" placeholder="Date of Birth">
+                                
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Date Hired') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="date" placeholder="Date Hired">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Date Start') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="date" placeholder="Date Start">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Hourly Rate') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="number" placeholder="Hourly Rate">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Has Night Diff') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Department Title">
+                                        <option value="">Eligibility</option>
+                                        <option value="">Percentage Increase</option>
+                                        <option value="">Defined Hours</option>
+                                        <option value="">Impact on Benefits</option>
+                                        <option value="">Union Contracts</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Username') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Username">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Password') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Password">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Contact Number') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="number" placeholder="Contact Number">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Emergency Contact') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="number" placeholder="Emergency Contact">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Emergency Person') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="Emergency Person">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Relationship') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Relationship">
+                                        <option value="">Manager-Employee Relationship</option>
+                                        <option value="">Colleague Relationships</option>
+                                        <option value="">Employee-Client Relationship</option>
+                                        <option value="">Supplier Relationships</option>
+                                        <option value="">Human Resources Relationships</option>
+                                        <option value="">Mentorship</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('TIN') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="TIN">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('SSS') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="SSS">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('PAGIBIG') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="PAGIBIG">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('PHILHEALTH') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                    <input class="form-control" type="text" placeholder="PHILHEALTH">
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="user.first_name" class="form-control-label">{{ __('Shift ID') }}</label>
+                                <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
+                                <select class="form-control form-select" name="" id="" placeholder="Shift ID">
+                                        <option value="">Day Shift - ID: DS001</option>
+                                        <option value="">Night Shift - ID: NS002</option>
+                                        <option value="">Evening Shift - ID: ES003</option>
+                                        <option value="">Weekend Shift - ID: WS004</option>
+                                        <option value="">Split Shift - ID: SS005</option>
+                                        <option value="">Overnight Shift - ID: OS006</option>
+                                        <option value="">Flexible Shift - ID: FS007</option>
+                                    </select>
+                                </div>
+                                @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
+
+                      
+                    <div class="d-flex justify-content-start">
+                        <button type="submit" class="btn bg-gradient-dark btn-md mt-4 mb-4"><i class="fas fa-plus me-3"></i>{{ 'Save New Employee' }}</button>
                     </div>
                 </form>
 
