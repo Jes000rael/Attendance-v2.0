@@ -27,7 +27,8 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1" rel="stylesheet" />
 
-   
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
 
 
 
@@ -45,6 +46,108 @@
         border: none; /* Remove border */
         box-shadow: none; /* Remove shadow */
     }
+     /* Custom button styles */
+     .dataTables_wrapper .dt-button {
+            /* background-color: #233142; */
+            color: #233142;
+            border: none;
+            padding: 0px 10px;
+            border-radius: 10px;
+            margin: 0px 0px;
+            margin-bottom:10px;
+            margin-top:10px;
+            
+            
+        }
+
+        .dataTables_wrapper .dt-button:hover {
+            background-color: #5C60F6;
+        }
+
+        /* Pagination styles */
+        .dataTables_wrapper .dataTables_paginate {
+            margin: 0px 0;
+            font-size:15px;
+            
+        }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button {
+            padding: 0px 10px;
+            margin: 0 5px;
+            background-color: transparent;
+
+        }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+            background-color: transparent;
+            color: white;
+        }
+        .dataTables_length {
+            text-align: center;
+            margin-bottom: 20px; /* Add some space below the length menu */
+            margin-right: 20px;
+        }
+        .dataTables_filter {
+            margin-bottom: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        .dataTables_filter label {
+            display: flex;
+            align-items: center;
+            font-size:12px;
+            margin-top:10px;
+        }
+
+        .dataTables_filter input {
+            margin-left: 5px;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s;
+            font-size:12px;
+        }
+
+        .dataTables_filter input:hover {
+            border-color: #ccc;
+        }
+        .dataTables_length {
+            font-family: Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .dataTables_length label {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            margin-top: 10px;
+            
+        }
+
+        .dataTables_length select {
+            margin-left: 5px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s, background-color 0.3s;
+            background-color: red;
+            font-size:12px;
+        }
+
+        .dataTables_length select:hover {
+            border-color: #007bff;
+            background-color: #e9ecef;
+        }
+
+        .dataTables_length select:focus {
+            outline: none;
+            border-color: #007bff;
+            background-color: #e9ecef;
+        }
 </style>
 @stack('styles')
     
@@ -78,6 +181,67 @@
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="assets/js/soft-ui-dashboard.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+
+
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->
+<script>
+  
+$(document).ready(function() {
+    $('#myTable').DataTable({
+      
+      pageLength: 10,
+      
+        dom: 'lfBrtip',
+        buttons: [
+                {
+                    extend: 'copy',
+                    text: 'Copy',
+                    className: 'custom-button'
+                },
+                {
+                    extend: 'csv',
+                    text: 'CSV',
+                    className: 'custom-button'
+                },
+                {
+                    extend: 'excel',
+                    text: 'Excel',
+                    className: 'custom-button'
+                },
+                {
+                    extend: 'pdf',
+                    text: 'PDF',
+                    className: 'custom-button'
+                },
+                {
+                    extend: 'print',
+                    text: 'Print',
+                    className: 'custom-button'
+                }
+            ],
+        paging: true,
+        searching: true,
+        ordering: true,
+        lengthMenu: [ 
+                    [1, 5, 10, 15, 25, 50, 100],
+                    [1, 5, 10, 15, 25, 50, 100]
+                ]
+       
+    });
+});
+
+
+
+
+</script>
 
     
   
