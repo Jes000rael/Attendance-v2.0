@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('seniority_levels', function (Blueprint $table) {
-            $table->id('Seniority_level_id');
-            $table->String('Description');
+            $table->id('seniority_level_id');
+            $table->String('description');
 
         });
     }

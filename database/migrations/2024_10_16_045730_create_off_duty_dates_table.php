@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('off_duty_dates', function (Blueprint $table) {
-            $table->id('Holiday_id');
-            $table->string('Field');
-            $table->String('Description');
-            $table->Date('Date');
-            $table->Double('Percentage');
+            $table->id('holiday_id');
+            $table->string('field');
+            $table->String('description');
+            $table->Date('date');
+            $table->Double('percentage');
         });
     }
 

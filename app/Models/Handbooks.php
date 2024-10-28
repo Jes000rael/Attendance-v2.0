@@ -9,10 +9,10 @@ class Handbooks extends Model
 {
     use HasFactory;
     protected $fillable =[
-        'Description',
-         'Link','Date',
+        'description',
+         'link','Date',
     ];
-    protected $primaryKey = 'Handbook_id';
+    protected $primaryKey = 'handbook_id';
     public $timestamps = false;
 
 

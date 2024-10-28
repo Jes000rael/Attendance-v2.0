@@ -12,15 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('request_time_adjustments', function (Blueprint $table) {
-            $table->id('Time_adjusment_id');
-            $table->foreignId('Attendance_id');
-            $table->foreignId('Request_type_id');
-            $table->timestamp('Start_time')->nullable();
-            $table->timestamp('End_time')->nullable();
+            $table->id('time_adjusment_id');
+            $table->foreignId('attendance_id');
+            $table->foreignId('request_type_id');
+            $table->timestamp('start_time')->nullable();
+            $table->timestamp('end_time')->nullable();
 
 
-            $table->time('Total_hours');
-            $table->string('Reason');
+            $table->time('total_hours');
+            $table->string('reason');
          
         });
     }

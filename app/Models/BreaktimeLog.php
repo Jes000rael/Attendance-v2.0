@@ -9,11 +9,11 @@ class BreaktimeLog extends Model
 {
     use HasFactory;
     protected $fillable = [ 
-        'Attendance_id',
-    'Total_hours','Field', 'Start_time',
-    'End_time',];
+        'attendance_id',
+    'total_hours','field', 'start_time',
+    'end_time',];
     public $timestamps = false;
-    protected $primaryKey = 'Breaktime_id';
+    protected $primaryKey = 'breaktime_id';
 
 
    

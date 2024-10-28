@@ -10,16 +10,16 @@ class RequestTimeAdjustments extends Model
     use HasFactory;
 
     protected $fillable = [
-        'Attendance_id',
-        'Request_type_id',
-        'Start_time',
-        'End_time',
-        'Total_hours',
-        'Reason',
+        'attendance_id',
+        'request_type_id',
+        'start_time',
+        'end_time',
+        'total_hours',
+        'reason',
     ];
 
     public $timestamps = false;
-    protected $primaryKey = 'Time_adjusment_id';
+    protected $primaryKey = 'time_adjusment_id';
 
 
  

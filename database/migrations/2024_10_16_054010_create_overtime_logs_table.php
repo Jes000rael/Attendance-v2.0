@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('overtime_logs', function (Blueprint $table) {
-            $table->id('Overtime_id');
-            $table->foreignId('Attendance_id');
-            $table->timestamp('Start_time')->nullable();
-            $table->timestamp('End_time')->nullable();
+            $table->id('overtime_id');
+            $table->foreignId('attendance_id');
+            $table->timestamp('start_time')->nullable();
+            $table->timestamp('end_time')->nullable();
 
-            $table->Time('Total_hours');
-            $table->String('Field');
+            $table->Time('total_hours');
+            $table->String('field');
 
         });
     }

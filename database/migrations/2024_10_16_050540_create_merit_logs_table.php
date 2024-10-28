@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('merit_logs', function (Blueprint $table) {
-            $table->id('Merit_id');
-            $table->foreignId('Employee_id');
-            $table->foreignId('Employee_id_from');
-            $table->foreignId('Merit_category_id');
-            $table->string('Merit_type_id');
-            $table->string('Reasons');
-            $table->Double('Points');
-            $table->Date('Date');
+            $table->id('merit_id');
+            $table->foreignId('employee_id');
+            $table->foreignId('employee_id_from');
+            $table->foreignId('merit_category_id');
+            $table->string('merit_type_id');
+            $table->string('reasons');
+            $table->Double('points');
+            $table->Date('date');
         });
     }
 

@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class SeniorityLevel extends Model
 {
     use HasFactory;
-    protected $fillable = ['Description'];
+    protected $fillable = ['description'];
     public $timestamps = false;
-    protected $primaryKey = 'Seniority_level_id';
+    protected $primaryKey = 'seniority_level_id';
 
 
 }

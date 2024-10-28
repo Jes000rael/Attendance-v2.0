@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class MeritCategory extends Model
 {
     use HasFactory;
-    protected $fillable = ['Description'];
+    protected $fillable = ['description'];
     public $timestamps = false;
-    protected $primaryKey = 'Merit_category_id';
+    protected $primaryKey = 'merit_category_id';
 
 
 }

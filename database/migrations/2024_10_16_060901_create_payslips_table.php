@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('payslips', function (Blueprint $table) {
-            $table->id('Payslip_id');
-            $table->foreignId('Employee_id');
-            $table->foreignId('Cutoff_id');
-            $table->Double('Hours_rendered');
-            $table->Double('OT_rendered');
-            $table->Double('Total_deduction');
-            $table->String('Total_pay');
+            $table->id('payslip_id');
+            $table->foreignId('employee_id');
+            $table->foreignId('cutoff_id');
+            $table->Double('hours_rendered');
+            $table->Double('ot_rendered');
+            $table->Double('total_deduction');
+            $table->String('total_pay');
         });
     }
 

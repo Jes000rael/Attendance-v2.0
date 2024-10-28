@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class MeritType extends Model
 {
     use HasFactory;
-    protected $fillable = ['Description'];
+    protected $fillable = ['description'];
     public $timestamps = false;
-    protected $primaryKey = 'Merit_type_id';
+    protected $primaryKey = 'merit_type_id';
 
 
 }

@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Absences extends Model
 {
     use HasFactory;
-    protected $fillable = ['Employee_id',
-    'Attendance_id',
-   'Date',
-    'Reason',];
+    protected $fillable = ['employee_id',
+    'attendance_id',
+   'date',
+    'eeason',];
 
-    protected $primaryKey = 'Absent_id';
+    protected $primaryKey = 'absent_id';
     public $timestamps = false;
 
 

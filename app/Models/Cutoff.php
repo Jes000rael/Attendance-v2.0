@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Cutoff extends Model
 {
     use HasFactory;
-    protected $fillable = ['Date_start',
-    'Date_end',
-    'Conversion_rate',];
+    protected $fillable = ['date_start',
+    'date_end',
+    'conversion_rate',];
     public $timestamps = false;
-    protected $primaryKey = 'Cutoff_id';
+    protected $primaryKey = 'cutoff_id';
 
     
     

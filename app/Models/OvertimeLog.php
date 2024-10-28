@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class OvertimeLog extends Model
 {
     use HasFactory;
-    protected $fillable = [ 'Attendance_id',
-    'Start_time',
-    'End_time',
-    'Total_hours','Field',];
+    protected $fillable = [ 'attendance_id',
+    'start_time',
+    'end_time',
+    'total_hours','field',];
     public $timestamps = false;
     protected $primaryKey = 'Overtime_id';
 

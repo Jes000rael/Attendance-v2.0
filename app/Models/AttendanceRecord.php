@@ -8,20 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class AttendanceRecord extends Model
 {
     use HasFactory;
-    protected $fillable = [ 'Employee_id',
-    'Cutoff_id',
-    'Total_hours',
-    'Total_break',
-    'Total_ot',
-    'Rate',
-    'Date',
-   'Duty_start',
-    'Time_in',
-    'Time_out',
-    'Status',
-    'Has_night_diff',];
+    protected $fillable = [ 'employee_id',
+    'cutoff_id',
+    'total_hours',
+    'total_break',
+    'total_ot',
+    'rate',
+    'date',
+   'duty_start',
+    'time_in',
+    'time_out',
+    'status',
+    'has_night_diff',];
     public $timestamps = false;
-    protected $primaryKey = 'Attendance_id';
+    protected $primaryKey = 'attendance_id';
 
 
 

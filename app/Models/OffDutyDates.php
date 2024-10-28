@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class OffDutyDates extends Model
 {
     use HasFactory;
-    protected $fillable = ['Field','Description','Date','Percentage',];
+    protected $fillable = ['field','description','date','percentage',];
     public $timestamps = false;
-    protected $primaryKey = 'Holiday_id';
+    protected $primaryKey = 'holiday_id';
 
     
 }

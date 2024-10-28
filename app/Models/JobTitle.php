@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class JobTitle extends Model
 {
     use HasFactory;
-    protected $fillable = ['Description'];
+    protected $fillable = ['description'];
     public $timestamps = false;
-    protected $primaryKey = 'Job_title_id';
+    protected $primaryKey = 'job_title_id';
 
 
 }

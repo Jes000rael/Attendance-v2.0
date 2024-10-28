@@ -12,19 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('attendance_records', function (Blueprint $table) {
-            $table->id('Attendance_id');
-            $table->foreignId('Employee_id');
-            $table->foreignId('Cutoff_id');
-            $table->Double('Total_hours');
-            $table->Double('Total_break');
-            $table->Double('Total_ot');
-            $table->Double('Rate');
-            $table->Date('Date');
-            $table->Time('Duty_start');
-            $table->timestamp('Time_in')->nullable();
-            $table->timestamp('Time_out')->nullable();
-            $table->String('Status');
-            $table->Boolean('Has_night_diff');
+            $table->id('attendance_id');
+            $table->foreignId('employee_id');
+            $table->foreignId('cutoff_id');
+            $table->Double('total_hours');
+            $table->Double('total_break');
+            $table->Double('total_ot');
+            $table->Double('rate');
+            $table->Date('date');
+            $table->Time('duty_start');
+            $table->timestamp('time_in')->nullable();
+            $table->timestamp('time_out')->nullable();
+            $table->String('status');
+            $table->Boolean('has_night_diff');
         });
     }
 

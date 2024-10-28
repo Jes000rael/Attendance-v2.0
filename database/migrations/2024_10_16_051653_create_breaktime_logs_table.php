@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('breaktime_logs', function (Blueprint $table) {
-            $table->id('Breaktime_id');
-            $table->foreignId('Attendance_id');
-            $table->timestamp('Start_time')->nullable();
-            $table->timestamp('End_time')->nullable();
-            $table->Time('Total_hours');
-            $table->string('Field');
+            $table->id('breaktime_id');
+            $table->foreignId('attendance_id');
+            $table->timestamp('start_time')->nullable();
+            $table->timestamp('end_time')->nullable();
+            $table->Time('eotal_hours');
+            $table->string('field');
           
         });
     }

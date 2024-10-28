@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cutoffs', function (Blueprint $table) {
-            $table->id('Cutoff_id');
-            $table->Date('Date_start');
-            $table->Date('Date_end');
-            $table->Double('Conversion_rate');
+            $table->id('cutoff_id');
+            $table->Date('date_start');
+            $table->Date('date_end');
+            $table->Double('conversion_rate');
         });
     }
 

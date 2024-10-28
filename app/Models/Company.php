@@ -10,7 +10,7 @@ class Company extends Model
     use HasFactory;
     protected $fillable = ['description',
     'employee_count',
-    'Timezone',];
+    'timezone',];
     public $timestamps = false;
     protected $primaryKey = 'company_id';
 

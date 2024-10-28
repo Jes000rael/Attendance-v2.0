@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('company_id');
             $table->String('description');
             $table->integer('employee_count');
-            $table->String('Timezone');
+            $table->String('timezone');
           
         });
     }

@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('employment_statuses', function (Blueprint $table) {
-            $table->id('Employment_status_id');
-            $table->string('Description');
+            $table->id('employment_status_id');
+            $table->string('description');
         });
     }
 

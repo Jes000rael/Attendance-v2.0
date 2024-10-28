@@ -14,22 +14,22 @@ return new class extends Migration
         Schema::create('work_schedules', function (Blueprint $table) {
             $table->id('work_schedule_id');
             $table->foreignId('employee_id');
-            $table->Time('Monday_in');
-            $table->Time('Monday_out');
-            $table->Time('Tuesday_in');
-            $table->Time('Tuesday_out');
-            $table->Time('Wednesday_in');
-            $table->Time('Wednesday_out');
-            $table->Time('Thursday_in');
-            $table->Time('Thursday_out');
-            $table->Time('Friday_in');
-            $table->Time('Friday_out');
-            $table->Time('Saturday_in')->nullable();
-            $table->Time('Saturday_out')->nullable();
-            $table->Time('Sunday_in')->nullable();
-            $table->Time('Sunday_out')->nullable();
-            $table->foreignId('Updated By');
-            $table->timestamp('Update_on')->nullable();
+            $table->Time('monday_in');
+            $table->Time('monday_out');
+            $table->Time('tuesday_in');
+            $table->Time('tuesday_out');
+            $table->Time('wednesday_in');
+            $table->Time('wednesday_out');
+            $table->Time('thursday_in');
+            $table->Time('thursday_out');
+            $table->Time('friday_in');
+            $table->Time('friday_out');
+            $table->Time('saturday_in')->nullable();
+            $table->Time('saturday_out')->nullable();
+            $table->Time('sunday_in')->nullable();
+            $table->Time('sunday_out')->nullable();
+            $table->foreignId('updated By');
+            $table->timestamp('update_on')->nullable();
 
            
         });

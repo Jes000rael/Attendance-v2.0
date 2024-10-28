@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class RequestTimeType extends Model
 {
     use HasFactory;
-    protected $fillable = ['Description'];
+    protected $fillable = ['description'];
     public $timestamps = false;
-    protected $primaryKey = 'Request_type_id';
+    protected $primaryKey = 'request_type_id';
 
 
 }

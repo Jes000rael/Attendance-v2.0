@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Payslip extends Model
 {
     use HasFactory;
-    protected $fillable = [ 'Employee_id',
-    'Cutoff_id',
-    'Hours_rendered',
-    'OT_rendered',
-    'Total_deduction',
-    'Total_pay',];
+    protected $fillable = [ 'employee_id',
+    'cutoff_id',
+    'hours_rendered',
+    'oT_rendered',
+    'total_deduction',
+    'total_pay',];
     public $timestamps = false;
-    protected $primaryKey = 'Payslip_id';
+    protected $primaryKey = 'payslip_id';
 
 
    

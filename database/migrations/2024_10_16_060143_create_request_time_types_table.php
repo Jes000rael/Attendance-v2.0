@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('request_time_types', function (Blueprint $table) {
-            $table->id('Request_type_id');
-            $table->String('Description');
+            $table->id('request_type_id');
+            $table->String('description');
         });
     }
 

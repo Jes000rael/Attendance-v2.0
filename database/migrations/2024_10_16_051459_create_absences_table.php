@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('absences', function (Blueprint $table) {
-            $table->id('Absent_id');
-            $table->foreignId('Employee_id');
-            $table->foreignId('Attendance_id');
-            $table->Date('Date');
-            $table->String('Reason');
+            $table->id('absent_id');
+            $table->foreignId('employee_id');
+            $table->foreignId('attendance_id');
+            $table->Date('date');
+            $table->String('reason');
         });
     }
 

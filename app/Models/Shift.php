@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Shift extends Model
 {
     use HasFactory;
-    protected $fillable = ['Description'];
+    protected $fillable = ['description'];
     public $timestamps = false;
-    protected $primaryKey = 'Shift_id';
+    protected $primaryKey = 'shift_id';
 
 
 }
