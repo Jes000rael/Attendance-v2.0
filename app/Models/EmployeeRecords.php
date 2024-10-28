@@ -51,6 +51,13 @@ class EmployeeRecords extends Authenticatable
         'shift_id','Date_added',
     ];
 
+    public function company()
+    {
+        return $this->hasMany(Company::class, 'company_id');
+    }
+   
+    
+
     public $timestamps = false;
 
 

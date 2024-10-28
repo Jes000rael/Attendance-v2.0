@@ -11,6 +11,13 @@ class Company extends Model
     protected $fillable = ['description',
     'employee_count',
     'timezone',];
+
+    public function employee()
+    {
+        return $this->belongsTo(EmployeeRecords::class, 'company_id');
+    }
+
+
     public $timestamps = false;
     protected $primaryKey = 'company_id';
 
