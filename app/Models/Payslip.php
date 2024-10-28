@@ -19,6 +19,11 @@ class Payslip extends Model
 {
     return $this->hasmany(AttendanceRecord::class, 'attendance_id');
 } 
+
+public function cutoff()
+{
+    return $this->hasmany(Cutoff::class, 'cutoff_id');
+} 
     public $timestamps = false;
     protected $primaryKey = 'payslip_id';
 

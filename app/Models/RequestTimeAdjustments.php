@@ -18,6 +18,11 @@ class RequestTimeAdjustments extends Model
         'reason',
     ];
 
+    public function requestTimetype()
+{
+    return $this->hasmany(RequestTimeType::class, 'request_type_id');
+} 
+
     public $timestamps = false;
     protected $primaryKey = 'time_adjusment_id';
 

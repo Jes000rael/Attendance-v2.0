@@ -41,6 +41,21 @@ public function attendanceStatus()
 {
     return $this->hasmany(AttendanceStatus::class, 'status_id');
 } 
+
+public function cutoff()
+{
+    return $this->hasmany(Cutoff::class, 'cutoff_id');
+} 
+
+public function requestTime()
+{
+    return $this->hasmany(RequestTimeAdjustments::class, 'attendance_id');
+} 
+
+
+
+
+
     public $timestamps = false;
     protected $primaryKey = 'attendance_id';
 

@@ -5,10 +5,8 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\AttendanceRecord;
-use App\Models\Absences;
-use App\Models\BreaktimeLogs;
-use App\Models\OvertimeLogs;
-use App\Models\Atte;
+
+
 
 
 class AttendanceRecords extends Controller
@@ -16,7 +14,7 @@ class AttendanceRecords extends Controller
     public function index()
     {
 
-        $AttendanceRecords = AttendanceRecord::with('absence','break','overtime','attendanceStatus')->get();
+        $AttendanceRecords = AttendanceRecord::with('absence','break','overtime','attendanceStatus','cutoff','requestTime')->get();
 
         return response()->json([
             'attendance_records' => $AttendanceRecords

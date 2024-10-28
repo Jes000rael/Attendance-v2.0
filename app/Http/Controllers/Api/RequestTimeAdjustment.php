@@ -11,7 +11,11 @@ class RequestTimeAdjustment extends Controller
 {
     public function index()
     {
-        return RequestTimeAdjustments::all();
+        $RequestTimeAdjustments = RequestTimeAdjustments::with('requestTimetype')->get();
+
+        return response()->json([
+            'request_time_adjustments' => $RequestTimeAdjustments
+        ]);
     }
 
     public function show($id)
