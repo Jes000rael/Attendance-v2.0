@@ -11,7 +11,10 @@ class Absences extends Model
     protected $fillable = ['employee_id',
     'attendance_id',
    'date',
-    'eeason',];
+    'reason',];
+
+
+
 
     protected $primaryKey = 'absent_id';
     public $timestamps = false;

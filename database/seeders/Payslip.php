@@ -18,12 +18,12 @@ class Payslip extends Seeder
         DB::table('Payslips')->insert([
             [
                 
-                'Employee_id' => '',
-    'Cutoff_id' => '',
-    'Hours_rendered' => '',
-    'OT_rendered' => '',
-    'Total_deduction' => '',
-    'Total_pay' => '',
+                'Employee_id' => '1',
+    'Cutoff_id' => '1',
+    'Hours_rendered' => '222',
+    'OT_rendered' => '33',
+    'Total_deduction' => '111',
+    'Total_pay' => '900',
                
             ],
          ]);

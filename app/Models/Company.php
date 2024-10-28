@@ -14,8 +14,14 @@ class Company extends Model
 
     public function employee()
     {
-        return $this->belongsTo(EmployeeRecords::class, 'company_id');
+        return $this->hasmany(EmployeeRecords::class, 'company_id');
     }
+    public function work_sched()
+    {
+        return $this->hasmany(WorkSchedule::class, 'employee_id');
+    }
+
+    
 
 
     public $timestamps = false;

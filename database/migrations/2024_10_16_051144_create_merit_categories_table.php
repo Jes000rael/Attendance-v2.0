@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('merit_categories', function (Blueprint $table) {
             $table->id('merit_category_id');
             $table->string('description');
-            $table->timestamps();
+         
         });
     }
 

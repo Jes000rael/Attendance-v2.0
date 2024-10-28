@@ -17,7 +17,7 @@ class SeniorityLevel extends Seeder
     {
         DB::table('seniority_levels')->insert([
             [
-                'Description' => '',
+                'Description' => 'okss',
                
             ],
          ]);

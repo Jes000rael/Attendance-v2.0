@@ -18,8 +18,8 @@ class Handbooks extends Seeder
         DB::table('Handbooks')->insert([
             [
                 
-                'Description'=> '',
-         'Link'=> '','Date'=> now(),
+                'Description'=> 'sss',
+         'Link'=> 'https::','Date'=> now(),
                
             ],
          ]);

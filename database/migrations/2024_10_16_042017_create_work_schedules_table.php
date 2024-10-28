@@ -28,7 +28,7 @@ return new class extends Migration
             $table->Time('saturday_out')->nullable();
             $table->Time('sunday_in')->nullable();
             $table->Time('sunday_out')->nullable();
-            $table->foreignId('updated By');
+            $table->foreignId('updated_by');
             $table->timestamp('update_on')->nullable();
 
            

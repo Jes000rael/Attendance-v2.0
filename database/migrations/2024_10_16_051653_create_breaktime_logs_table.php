@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('attendance_id');
             $table->timestamp('start_time')->nullable();
             $table->timestamp('end_time')->nullable();
-            $table->Time('eotal_hours');
+            $table->Time('total_hours');
             $table->string('field');
           
         });

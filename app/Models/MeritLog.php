@@ -15,6 +15,16 @@ class MeritLog extends Model
     'reasons',
     'points',
     'date',];
+
+    public function meritCategory()
+{
+    return $this->hasmany(MeritCategory::class, 'merit_category_id');
+}
+
+public function meritType()
+{
+    return $this->hasmany(MeritType::class, 'merit_type_id');
+}
     public $timestamps = false;
     protected $primaryKey = 'merit_id';
 

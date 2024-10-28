@@ -18,7 +18,7 @@ class OffDutyDates extends Seeder
         DB::table('off_duty_dates')->insert([
             [
                 
-                'Field' => '','Description' => '','Date' =>now(),'Percentage' => '',
+                'Field' => 'nice','Description' => 'happy','Date' =>now(),'Percentage' => 100,
                
             ],
          ]);

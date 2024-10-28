@@ -20,6 +20,27 @@ class AttendanceRecord extends Model
     'time_out',
     'status',
     'has_night_diff',];
+
+    public function absence()
+{
+    return $this->hasmany(Absences::class, 'attendance_id');
+} 
+
+public function break()
+{
+    return $this->hasmany(BreaktimeLog::class, 'attendance_id');
+} 
+
+public function overtime()
+{
+    return $this->hasmany(OvertimeLog::class, 'attendance_id');
+} 
+
+
+public function attendanceStatus()
+{
+    return $this->hasmany(AttendanceStatus::class, 'status_id');
+} 
     public $timestamps = false;
     protected $primaryKey = 'attendance_id';
 

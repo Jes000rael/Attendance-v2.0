@@ -5,13 +5,18 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\MeritLog;
-
+use App\Models\MeritCategory;
+use App\Models\MeritType;
 
 class MeritLogs extends Controller
 {
     public function index()
     {
-        return MeritLog::all();
+        $MeritLog = MeritLog::with('meritCategory','meritType')->get();
+
+        return response()->json([
+            'merit_logs' => $MeritLog
+        ]);
     }
 
     public function show($id)

@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Models\Company;
 use App\Models\EmployeeRecords;
 
-
 class Companys extends Controller
 {
    

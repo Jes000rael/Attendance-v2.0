@@ -5,13 +5,18 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Payslip;
+use App\Models\AttendanceRecord;
 
 
 class Payslips extends Controller
 {
     public function index()
     {
-        return Payslip::all();
+        $Payslip = Payslip::with('attendance')->get();
+
+        return response()->json([
+            'attendance_records' => $Payslip
+        ]);
     }
 
     public function show($id)

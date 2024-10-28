@@ -14,6 +14,11 @@ class Payslip extends Model
     'oT_rendered',
     'total_deduction',
     'total_pay',];
+
+    public function attendance()
+{
+    return $this->hasmany(AttendanceRecord::class, 'attendance_id');
+} 
     public $timestamps = false;
     protected $primaryKey = 'payslip_id';
 

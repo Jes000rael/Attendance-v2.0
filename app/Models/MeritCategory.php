@@ -9,6 +9,8 @@ class MeritCategory extends Model
 {
     use HasFactory;
     protected $fillable = ['description'];
+
+    
     public $timestamps = false;
     protected $primaryKey = 'merit_category_id';
 

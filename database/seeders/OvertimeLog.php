@@ -18,10 +18,10 @@ class OvertimeLog extends Seeder
         DB::table('overtime_logs')->insert([
             [
               
-                'Attendance_id'=> '',
+                'Attendance_id'=> '1',
     'Start_time'=> now(),
-    'End_time'=> '',
-    'Total_hours'=> '','Field'=> '',
+    'End_time'=> now(),
+    'Total_hours'=> '11','Field'=> 'sda',
                
             ],
          ]);

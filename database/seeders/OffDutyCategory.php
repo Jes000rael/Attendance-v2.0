@@ -17,7 +17,7 @@ class OffDutyCategory extends Seeder
     {
         DB::table('off_duty_categories')->insert([
             [
-                'Description' => '',
+                'Description' => 'Why',
                
             ],
          ]);

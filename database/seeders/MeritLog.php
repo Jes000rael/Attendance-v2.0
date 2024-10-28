@@ -18,13 +18,13 @@ class MeritLog extends Seeder
         DB::table('merit_logs')->insert([
             [
                 
-                'Employee_id'=> '',
-    'Employee_id_from'=> '',
-    'Merit_category_id'=> '',
-    'Merit_type_id'=> '',
-    'Reasons'=> '',
-    'Points'=> '',
-    'Date'=> now(),               
+                'employee_id'=> 1,
+    'employee_id_from'=> 1,
+    'merit_category_id'=> '1',
+    'merit_type_id'=> '1',
+    'reasons'=> 'sad',
+    'points'=> 100,
+    'date'=> now(),               
             ],
          ]);
     }

@@ -12,6 +12,11 @@ class Deductions extends Model
 'employee_id',
 'description',
 'value',];
+
+public function work_sched()
+{
+    return $this->hasmany(WorkSchedule::class, 'employee_id');
+}
 public $timestamps = false;
     protected $primaryKey = 'deductions_id';
 

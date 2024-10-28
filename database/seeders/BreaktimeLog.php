@@ -20,7 +20,7 @@ class BreaktimeLog extends Seeder
                 
                 'Attendance_id'=> 1,
     
-    'Total_hours'=>now(),
+    'Total_hours'=>'1:00:00',
     'Start_time'=> now(),
     'End_time'=> now(),
     'Field'=> 'sad',

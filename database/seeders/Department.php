@@ -17,7 +17,7 @@ class Department extends Seeder
     {
         DB::table('Departments')->insert([
             [
-                'Description' => '',
+                'Description' => 'Sales',
                
             ],
          ]);

@@ -17,9 +17,9 @@ class Deductions extends Seeder
         DB::table('Deductions')->insert([
             [
              
-                'employee_id' => '',
-'description' => '',
-'value' => '',
+                'employee_id' => '1',
+'description' => 'Naka Guba sang Mouse',
+'value' => '5',
                
             ],
          ]);

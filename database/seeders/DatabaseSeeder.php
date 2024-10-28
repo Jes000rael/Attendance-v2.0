@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(Absences::class);
         $this->call(AttendanceRecord::class);
+        $this->call(AttendanceStatus::class);
         $this->call(Announcement::class);
         $this->call(BreaktimeLog::class);
         $this->call(Company::class);

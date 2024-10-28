@@ -17,7 +17,7 @@ class EmploymentStatus extends Seeder
     {
         DB::table('employment_statuses')->insert([
             [
-                'Description' => '',
+                'Description' => 'Active',
                
             ],
          ]);

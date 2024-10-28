@@ -18,9 +18,9 @@ class Cutoff extends Seeder
         DB::table('Cutoffs')->insert([
             [
               
-                'Date_start'=> '',
-    'Date_end'=> '',
-    'Conversion_rate'=> '',
+                'Date_start'=> now(),
+    'Date_end'=> now(),
+    'Conversion_rate'=> 100,
                
             ],
          ]);

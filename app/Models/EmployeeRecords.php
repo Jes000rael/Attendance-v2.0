@@ -50,12 +50,24 @@ class EmployeeRecords extends Authenticatable
         'philhealth',
         'shift_id','Date_added',
     ];
-
-    public function company()
+    public function work_sched()
     {
-        return $this->hasMany(Company::class, 'company_id');
+        return $this->hasmany(WorkSchedule::class, 'employee_id');
     }
-   
+    public function deduction()
+{
+    return $this->hasmany(Deductions::class, 'employee_id');
+}
+public function meritLog()
+{
+    return $this->hasmany(MeritLog::class, 'employee_id');
+} 
+
+public function absence()
+{
+    return $this->hasmany(Absences::class, 'employee_id');
+} 
+
     
 
     public $timestamps = false;

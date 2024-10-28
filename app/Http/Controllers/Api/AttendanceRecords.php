@@ -5,13 +5,22 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\AttendanceRecord;
+use App\Models\Absences;
+use App\Models\BreaktimeLogs;
+use App\Models\OvertimeLogs;
+use App\Models\Atte;
 
 
 class AttendanceRecords extends Controller
 {
     public function index()
     {
-        return AttendanceRecord::all();
+
+        $AttendanceRecords = AttendanceRecord::with('absence','break','overtime','attendanceStatus')->get();
+
+        return response()->json([
+            'attendance_records' => $AttendanceRecords
+        ]);
     }
 
     public function show($id)

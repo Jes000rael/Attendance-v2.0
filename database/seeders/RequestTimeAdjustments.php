@@ -18,12 +18,12 @@ class RequestTimeAdjustments extends Seeder
         DB::table('request_time_adjustments')->insert([
             [
                 
-                'Attendance_id'=> '',
-                'Request_type_id'=> '',
+                'Attendance_id'=> '1',
+                'Request_type_id'=> '1',
                 'Start_time'=> now(),
-                'End_time'=> '',
-                'Total_hours'=> '',
-                'Reason'=> '',
+                'End_time'=> now(),
+                'Total_hours'=> '222',
+                'Reason'=> 'sheshhh',
                
             ],
          ]);

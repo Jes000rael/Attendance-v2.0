@@ -17,7 +17,7 @@ class JobTitle extends Seeder
     {
         DB::table('job_titles')->insert([
             [
-                'Description' => '',
+                'Description' => 'gogo',
                
             ],
          ]);
