@@ -330,8 +330,9 @@
 </div>
 
 <!-- modal edit -->
+
 <div class="modal fade" id="Modalupdate" tabindex="-1" aria-labelledby="employeeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="employeeModalLabel">Update Employee </h5>
@@ -425,8 +426,8 @@
                                 <label for="user.first_name" class="form-control-label">{{ __('Employement Status ID') }}</label>
                                 <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
                                 <select class="form-control form-select" name="" id="" placeholder="Employment Status ID">
-                                        <option value="">Full-Time Employee (FTE)</option>
-                                        <option value="">Part-Time Employee (PTE)</option>
+                                        <option value="">Full-Time Employee</option>
+                                        <option value="">Part-Time Employee</option>
                                         <option value="">Contractor</option>
                                         <option value="">Temporary Employee</option>
                                         <option value="">Intern</option>
@@ -442,16 +443,16 @@
                                 <label for="user.first_name" class="form-control-label">{{ __('Job Title ID') }}</label>
                                 <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
                                 <select class="form-control form-select" name="" id="" placeholder="Job Title ID">
-                                        <option value="">Software Engineer - ID: SE001</option>
-                                        <option value="">Data Analyst - ID: DA002</option>
-                                        <option value="">Project Manager - ID: PM003</option>
-                                        <option value="">Marketing Specialist - ID: MS004</option>
-                                        <option value="">Human Resources Manager - ID: HRM005</option>
-                                        <option value="">Sales Associate - ID: SA006</option>
-                                        <option value="">Graphic Designer - ID: GD007</option>
-                                        <option value="">Product Manager - ID: PM008</option>
-                                        <option value="">Customer Service Representative - ID: CSR009</option>
-                                        <option value="">Financial Analyst - ID: FA010</option>
+                                        <option value="">Software Engineer</option>
+                                        <option value="">Data Analyst</option>
+                                        <option value="">Project Manager</option>
+                                        <option value="">Marketing Specialist</option>
+                                        <option value="">Human Resources Manager </option>
+                                        <option value="">Sales Associate</option>
+                                        <option value="">Graphic Designer</option>
+                                        <option value="">Product Manager</option>
+                                        <option value="">Customer Service Representative </option>
+                                        <option value="">Financial Analyst</option>
                                     </select>
                                 </div>
                                 @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
@@ -462,18 +463,18 @@
                                 <label for="user.first_name" class="form-control-label">{{ __('Department Title') }}</label>
                                 <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
                                 <select class="form-control form-select" name="" id="" placeholder="Department Title">
-                                        <option value="">Human Resources (HR)</option>
+                                        <option value="">Human Resources</option>
                                         <option value="">Finance</option>
                                         <option value="">Marketing</option>
                                         <option value="">Sales</option>
                                         <option value="">Operations</option>
-                                        <option value="">Information Technology (IT)</option>
+                                        <option value="">Information Technology</option>
                                         <option value="">Customer Service</option>
-                                        <option value="">Research and Development (R&D)</option>
+                                        <option value="">Research and Development </option>
                                         <option value="">Product Management</option>
                                         <option value="">Legal</option>
                                         <option value="">Compliance</option>
-                                        <option value="">Public Relations (PR)</option>
+                                        <option value="">Public Relations</option>
                                         <option value="">Supply Chain Management</option>
                                         <option value="">Facilities Management</option>
                                         <option value="">Business Development</option>
@@ -584,11 +585,11 @@
                                 <label for="user.first_name" class="form-control-label">{{ __('Relationship') }}</label>
                                 <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
                                 <select class="form-control form-select" name="" id="" placeholder="Relationship">
-                                        <option value="">Manager-Employee Relationship</option>
-                                        <option value="">Colleague Relationships</option>
-                                        <option value="">Employee-Client Relationship</option>
-                                        <option value="">Supplier Relationships</option>
-                                        <option value="">Human Resources Relationships</option>
+                                        <option value="">Manager-Employe</option>
+                                        <option value="">Colleague</option>
+                                        <option value="">Employee-Clien</option>
+                                        <option value="">Supplier</option>
+                                        <option value="">Human Resources</option>
                                         <option value="">Mentorship</option>
                                     </select>
                                 </div>
@@ -637,13 +638,13 @@
                                 <label for="user.first_name" class="form-control-label">{{ __('Shift ID') }}</label>
                                 <div class="@error('user.first_name')border border-danger rounded-3 @enderror">
                                 <select class="form-control form-select" name="" id="" placeholder="Shift ID">
-                                        <option value="">Day Shift - ID: DS001</option>
-                                        <option value="">Night Shift - ID: NS002</option>
-                                        <option value="">Evening Shift - ID: ES003</option>
-                                        <option value="">Weekend Shift - ID: WS004</option>
-                                        <option value="">Split Shift - ID: SS005</option>
-                                        <option value="">Overnight Shift - ID: OS006</option>
-                                        <option value="">Flexible Shift - ID: FS007</option>
+                                        <option value="">Day Shift</option>
+                                        <option value="">Night Shift</option>
+                                        <option value="">Evening Shift</option>
+                                        <option value="">Weekend Shift</option>
+                                        <option value="">Split Shift</option>
+                                        <option value="">Overnight Shift</option>
+                                        <option value="">Flexible Shift</option>
                                     </select>
                                 </div>
                                 @error('user.first_name') <div class="text-danger">{{ $message }}</div> @enderror
@@ -652,7 +653,7 @@
 
                       
                     <div class="d-flex justify-content-start">
-                        <button type="submit" class="btn bg-gradient-dark btn-md mt-4 mb-4"><i class="fas fa-plus me-3"></i>{{ 'Save Changes' }}</button>
+                        <button type="submit" class="btn bg-gradient-dark btn-md mt-4 mb-4"><i class="fas fa-user-edit me-3"></i>{{ 'Save Changes' }}</button>
                     </div>
                 </form>
 
