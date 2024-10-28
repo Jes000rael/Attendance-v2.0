@@ -28,6 +28,7 @@ use App\Http\Controllers\Api\RequestTimeTypes;
 use App\Http\Controllers\Api\SeniorityLevels;
 use App\Http\Controllers\Api\Shifts;
 use App\Http\Controllers\Api\WorkSchedules;
+use App\Http\Controllers\Api\AttendanceStatus;
 
 
 /*
@@ -72,6 +73,14 @@ Route::get('/attendanceRecords/{id}', [AttendanceRecords::class, 'show']);
 Route::post('/attendanceRecords', [AttendanceRecords::class, 'store']);
 Route::put('/attendanceRecords/{id}', [AttendanceRecords::class, 'update']);
 Route::delete('/attendanceRecords/{id}', [AttendanceRecords::class, 'destroy']);
+
+
+
+Route::get('/attendanceStatus', [AttendanceStatus::class, 'index']);
+Route::get('/attendanceStatus/{id}', [AttendanceStatus::class, 'show']);
+Route::post('/attendanceStatus', [AttendanceStatus::class, 'store']);
+Route::put('/attendanceStatus/{id}', [AttendanceStatus::class, 'update']);
+Route::delete('/attendanceStatus/{id}', [AttendanceStatus::class, 'destroy']);
 
 
 
