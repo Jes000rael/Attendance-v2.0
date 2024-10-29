@@ -18,8 +18,10 @@ class AttendanceRecord extends Model
    'duty_start',
     'time_in',
     'time_out',
-    'status',
+    'status_id',
     'has_night_diff',];
+
+ 
 
     public function absence()
 {
@@ -37,21 +39,24 @@ public function overtime()
 } 
 
 
-public function attendanceStatus()
-{
-    return $this->hasmany(AttendanceStatus::class, 'status_id');
-} 
 
-public function cutoff()
-{
-    return $this->hasmany(Cutoff::class, 'cutoff_id');
-} 
+
 
 public function requestTime()
 {
     return $this->hasmany(RequestTimeAdjustments::class, 'attendance_id');
 } 
 
+
+public function attendanceStatus()
+{
+    return $this->belongsTo(AttendanceStatus::class, 'status_id');
+} 
+
+public function cutoff()
+{
+    return $this->belongsTo(Cutoff::class, 'cutoff_id');
+} 
 
 
 

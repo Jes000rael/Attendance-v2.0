@@ -71,26 +71,26 @@ public function absence()
 
 public function shift()
 {
-    return $this->hasmany(Shift::class, 'shift_id');
+    return $this->belongsTo(Shift::class, 'shift_id');
 } 
     
 public function department()
 {
-    return $this->hasmany(Department::class, 'department_id');
+    return $this->belongsTo(Department::class, 'department_id');
 } 
 public function jobtitle()
 {
-    return $this->hasmany(JobTitle::class, 'job_title_id');
+    return $this->belongsTo(JobTitle::class, 'job_title_id');
 } 
 
 public function employmentStatus()
 {
-    return $this->hasmany(EmploymentStatus::class, 'employment_status_id');
+    return $this->belongsTo(EmploymentStatus::class, 'employment_status_id');
 } 
 
 public function seniorityLevel()
 {
-    return $this->hasmany(SeniorityLevel::class, 'seniority_level_id');
+    return $this->belongsTo(SeniorityLevel::class, 'seniority_level_id');
 } 
     public $timestamps = false;
 

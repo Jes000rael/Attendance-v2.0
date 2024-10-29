@@ -10,8 +10,6 @@ class OffDutyDates extends Model
     use HasFactory;
     protected $fillable = ['category_id','description','date','percentage',];
 
-
-
     public function OffDuty()
     {
         return $this->hasmany(OffDutyCategory::class, 'category_id');

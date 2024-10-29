@@ -30,7 +30,7 @@ class EmployeeRecords extends Seeder
                 'seniority_level_id'=> '1',
                 'employment_status_id'=> '1',
                 'job_title_id'=> '1',
-                'department_title'=> '1',
+                'department_id'=> '1',
                 'date_of_birth'=> now(),
                 'date_hired'=>now(),
                 'date_start'=> now(),

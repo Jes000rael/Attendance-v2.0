@@ -21,7 +21,13 @@ class OffDutyDate extends Controller
 
     public function show($id)
     {
-        return OffDutyDates::findOrFail($id);
+        $OffDutyDates = OffDutyDates::with('OffDuty')->where('category_id', $id)->first();
+
+        if (!$OffDutyDates) {
+            return response()->json(['message' => 'Log not found'], 404);
+        }
+
+        return response()->json($OffDutyDates);
     }
 
     public function store(Request $request)

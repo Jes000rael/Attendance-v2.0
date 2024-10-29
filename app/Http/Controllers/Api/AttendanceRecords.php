@@ -23,7 +23,7 @@ class AttendanceRecords extends Controller
 
     public function show($id)
     {
-        $AttendanceRecord = AttendanceRecord::where('Attendance_id', $id)->first();
+        $AttendanceRecord = AttendanceRecord::with('absence', 'break', 'overtime', 'attendanceStatus', 'cutoff', 'requestTime')->findOrFail($id);
 
         if (!$AttendanceRecord) {
             return response()->json(['message' => 'Log not found'], 404);
