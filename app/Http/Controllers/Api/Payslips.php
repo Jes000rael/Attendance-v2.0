@@ -15,14 +15,13 @@ class Payslips extends Controller
         $Payslip = Payslip::with('attendance','cutoff','employeeRec')->get();
 
         return response()->json([
-            'attendance_records' => $Payslip
+            'payslips' => $Payslip
         ]);
     }
 
     public function show($id)
     {
-        $Payslip = Payslip::where('Payslip_id', $id)->first();
-
+        $Payslip = Payslip::with('attendance','cutoff','employeeRec')->find($id);
         if (!$Payslip) {
             return response()->json(['message' => 'Log not found'], 404);
         }
@@ -38,7 +37,7 @@ class Payslips extends Controller
 
     public function update(Request $request, $id)
     {
-        $Payslip = Payslip::where('Payslip_id', $id)->first();
+        $Payslip = Payslip::where('payslip_id', $id)->first();
         if (!$Payslip) {
             return response()->json(['message' => 'Log not found'], 404);
         }

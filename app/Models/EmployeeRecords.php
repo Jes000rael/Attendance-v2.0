@@ -68,6 +68,17 @@ public function absence()
     return $this->hasmany(Absences::class, 'employee_id');
 } 
 
+public function attendance()
+{
+    return $this->hasmany(AttendanceRecord::class, 'employee_id');
+} 
+
+public function slip()
+{
+    return $this->hasmany(Payslip::class, 'employee_id');
+} 
+
+
 
 public function shift()
 {

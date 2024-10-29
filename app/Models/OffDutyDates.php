@@ -12,7 +12,7 @@ class OffDutyDates extends Model
 
     public function OffDuty()
     {
-        return $this->hasmany(OffDutyCategory::class, 'category_id');
+        return $this->belongsTo(OffDutyCategory::class, 'category_id');
     } 
     public $timestamps = false;
     protected $primaryKey = 'holiday_id';
