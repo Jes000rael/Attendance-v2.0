@@ -11,13 +11,12 @@ class OffDutyDate extends Controller
 {
     public function index()
     {
-        $OffDutyDates = OffDutyDates::where('Holiday_id', $id)->first();
+        $OffDutyDates = OffDutyDates::with('OffDuty')->get();
 
-    if (!$OffDutyDates) {
-        return response()->json(['message' => 'Log not found'], 404);
-    }
+        return response()->json([
+            'off_duty_dates' => $OffDutyDates
+        ]);
 
-    return response()->json($OffDutyDates);
     }
 
     public function show($id)

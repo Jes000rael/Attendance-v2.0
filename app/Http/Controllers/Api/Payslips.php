@@ -12,7 +12,7 @@ class Payslips extends Controller
 {
     public function index()
     {
-        $Payslip = Payslip::with('attendance','cutoff')->get();
+        $Payslip = Payslip::with('attendance','cutoff','employeeRec')->get();
 
         return response()->json([
             'attendance_records' => $Payslip

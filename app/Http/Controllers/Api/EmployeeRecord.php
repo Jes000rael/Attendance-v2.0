@@ -19,7 +19,7 @@ class EmployeeRecord extends Controller
 {
     public function index()
     {
-        $EmployeeRecords = EmployeeRecords::with('work_sched','deduction','meritLog','absence')->get();
+        $EmployeeRecords = EmployeeRecords::with('work_sched','deduction','meritLog','absence','shift','department','jobtitle','seniorityLevel','employmentStatus')->get();
 
         return response()->json([
             'employees' => $EmployeeRecords

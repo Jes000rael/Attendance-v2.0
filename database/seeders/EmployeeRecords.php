@@ -27,7 +27,7 @@ class EmployeeRecords extends Seeder
                 'suffix'=> '1',
                 'blood_type'=> '1',
                 'address'=> '1',
-                'seniority_level'=> '1',
+                'seniority_level_id'=> '1',
                 'employment_status_id'=> '1',
                 'job_title_id'=> '1',
                 'department_title'=> '1',
