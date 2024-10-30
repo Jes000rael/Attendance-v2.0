@@ -125,7 +125,7 @@
 </g>
 
 </svg>
-                                    <span class="ms-1">{{ __('Employee Records') }}</span>
+                                    <span class="ms-1">{{ __('Employee Records okay') }}</span>
                                 </a>
                             </li>
                             <li class="nav-item">
